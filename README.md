@@ -7,5 +7,4 @@ Corben Roszak
 
 This repo holds my solutions for the 2020 [Advent of Code](https://adventofcode.com/ "Advent of Code")!
 
-***
 Solutions are in Java and were created using Jetbrains Intellij IDE.
