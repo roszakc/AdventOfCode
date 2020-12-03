@@ -2,8 +2,7 @@
 
 <h2> Roszakc </h2>
 
-This repo holds my solutions for the 2020 [Advent of Code](https://adventofcode.com/ "Advent of Code")! 
-Most of these solutions will be in Java and were created using Jetbrains Intellij IDE.
-
+This repo holds my solutions for the 2020 [Advent of Code](https://adventofcode.com/ "Advent of Code")!
 
 ***
+Solutions are in Java and were created using Jetbrains Intellij IDE.
