@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  * Advent of Code Day 3
  */
-public class Main {
+public class Day3 {
 
     private static final int repeatSize = 323;
     private static final int rowSize = 31;
