@@ -1,8 +1,5 @@
-import javax.swing.plaf.ComponentInputMapUIResource;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.security.SignedObject;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -95,16 +92,8 @@ public class Day5 {
         return getNumber(command);
     }
 
-
     private static int getSeatRow(String[] command) {
 
         return getNumber(command);
     }
-
-
-
-
-
-
-
 }
