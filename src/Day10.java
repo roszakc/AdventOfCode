@@ -1,6 +1,7 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.nio.channels.InterruptedByTimeoutException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -10,6 +11,8 @@ public class Day10 {
 
     public static void main(String[] args) throws FileNotFoundException {
         LinkedList<Integer> numbers = readData(args[0]);
+        numbers.push(0);
+        numbers.add(numbers.getLast()+3);
 
         int getJoltages = getJoltage(numbers);
 
@@ -32,8 +35,8 @@ public class Day10 {
         int twoDiffCount = 0;
         int threeDiffCount = 0;
         int curJolt = 0;
-
-        LinkedList<Integer> copy = (LinkedList<Integer>) numList.clone();
+        Collections.sort(numList);
+        LinkedList<Integer> copyList = (LinkedList<Integer>) numList.clone();
 
         while(!numList.isEmpty()){
             int isSmallestDiffIndex = getJoltDiff(curJolt, numList);
@@ -48,20 +51,33 @@ public class Day10 {
         }
         threeDiffCount++;
 
-        Collections.sort(copy);
-        //int len = longestAmount(copy);
-
-        System.out.println(oneDiffCount);
-        System.out.println(threeDiffCount);
-
-        long a = (long) Math.pow(2.0, (float) oneDiffCount);
-        System.out.println(a);
-        long b = (long) Math.pow(7.0, threeDiffCount);
-        System.out.println(b);
-
-        System.out.println("num "+ a+b);
+        int[] seqCounts = getConsectutiveLen(copyList);
+        long maxPerms = (long) ((Math.pow(2, seqCounts[3]) * Math.pow(4,seqCounts[4])* Math.pow(7,seqCounts[5])));
+        System.out.println("max perms: "+maxPerms);
 
         return threeDiffCount * oneDiffCount;
+    }
+
+    private static int[] getConsectutiveLen(LinkedList<Integer> copy) {
+        int[] seqCountArray = new int[6];
+        int count = 1;
+        int index = 0;
+        while (index+1 < copy.size()) {
+
+            int cur = copy.get(index);
+            int next = copy.get(index + 1);
+
+            if (next - cur == 1) {
+                count++;
+            } else {
+                seqCountArray[count]++;
+                count = 1;
+            }
+            index++;
+        }
+
+        return seqCountArray;
+
     }
 
 
