@@ -55,25 +55,25 @@ public class Day8 {
             while(!curInstruction.hasRun && !breakLoop){
                 int next = instructionsList.indexOf(curInstruction);
                 cmdCount++;
-                switch (curInstruction.instructionName) {
-                    case "nop" -> {
-                        nopCount++;
-                        next++;
-                    }
-                    case "jmp" -> {
-                        if(jmpCount != i){
-                            next += curInstruction.number;
-                        } else {
-                            next++;
-                        }
-
-                        jmpCount++;
-                    }
-                    case "acc" -> {
-                        accumulator += curInstruction.number;
-                        next++;
-                    }
-                }
+//                switch (curInstruction.instructionName) {
+//                    case "nop" -> {
+//                        nopCount++;
+//                        next++;
+//                    }
+//                    case "jmp" -> {
+//                        if(jmpCount != i){
+//                            next += curInstruction.number;
+//                        } else {
+//                            next++;
+//                        }
+//
+//                        jmpCount++;
+//                    }
+//                    case "acc" -> {
+//                        accumulator += curInstruction.number;
+//                        next++;
+//                    }
+//                }
                 curInstruction.hasRun = true;
 
                 if(next >= instructionsList.size()){

@@ -41,11 +41,11 @@ public class Day10 {
         while(!numList.isEmpty()){
             int isSmallestDiffIndex = getJoltDiff(curJolt, numList);
             int curDiff = numList.get(isSmallestDiffIndex) - curJolt;
-            switch (curDiff) {
-                case 1 -> oneDiffCount++;
-                case 2 -> twoDiffCount++;
-                case 3 -> threeDiffCount++;
-            }
+//            switch (curDiff) {
+//                case 1 -> oneDiffCount++;
+//                case 2 -> twoDiffCount++;
+//                case 3 -> threeDiffCount++;
+//            }
             curJolt = numList.get(isSmallestDiffIndex);
             numList.remove(isSmallestDiffIndex);
         }

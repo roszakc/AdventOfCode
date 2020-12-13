@@ -73,53 +73,53 @@ public class Day4 {
     private static void readInput(Passport newPass, String word) {
 
         String[] wordSp = word.split(":");
-        switch (wordSp[0]) {
-            case "byr" -> {
-                newPass.byr = wordSp[1];
-                if(isValidInt(word, birthMin, birthMax)){
-                    newPass.fieldsSet++;
-                }
-            }
-            case "iyr" -> {
-                newPass.iyr = wordSp[1];
-                if(isValidInt(word, issueMin, issueMax)){
-                    newPass.fieldsSet++;
-                }
-            }
-            case "eyr" -> {
-                newPass.eyr = wordSp[1];
-                if(isValidInt(word, expMin, expMax)){
-                    newPass.fieldsSet++;
-                }
-            }
-            case "hgt" -> {
-                newPass.hgt = wordSp[1];
-                if(wordSp[1].matches("^(1([5-8][0-9]|9[0-3])cm)|(59|6[0-9]|7[0-6])in$")) {
-                    newPass.fieldsSet++;
-                }
-            }
-            case "hcl" -> {
-                newPass.hcl = wordSp[1];
-                if(wordSp[1].matches("^#(\\d|[abcdef]){6}$")){
-                    newPass.fieldsSet++;
-                }
-            }
-            case "ecl" -> {
-                newPass.ecl = wordSp[1];
-                if(wordSp[1].matches("^(amb|blu|brn|gry|grn|hzl|oth)$")){
-                    newPass.fieldsSet++;
-                }
-            }
-            case "pid" -> {
-                newPass.pid = wordSp[1];
-                if(wordSp[1].matches("^\\d{9}$")){
-                    newPass.fieldsSet++;
-                }
-            }
-            case "cid" -> {
-                newPass.cid = wordSp[1];
-            }
-        }
+//        switch (wordSp[0]) {
+//            case "byr" -> {
+//                newPass.byr = wordSp[1];
+//                if(isValidInt(word, birthMin, birthMax)){
+//                    newPass.fieldsSet++;
+//                }
+//            }
+//            case "iyr" -> {
+//                newPass.iyr = wordSp[1];
+//                if(isValidInt(word, issueMin, issueMax)){
+//                    newPass.fieldsSet++;
+//                }
+//            }
+//            case "eyr" -> {
+//                newPass.eyr = wordSp[1];
+//                if(isValidInt(word, expMin, expMax)){
+//                    newPass.fieldsSet++;
+//                }
+//            }
+//            case "hgt" -> {
+//                newPass.hgt = wordSp[1];
+//                if(wordSp[1].matches("^(1([5-8][0-9]|9[0-3])cm)|(59|6[0-9]|7[0-6])in$")) {
+//                    newPass.fieldsSet++;
+//                }
+//            }
+//            case "hcl" -> {
+//                newPass.hcl = wordSp[1];
+//                if(wordSp[1].matches("^#(\\d|[abcdef]){6}$")){
+//                    newPass.fieldsSet++;
+//                }
+//            }
+//            case "ecl" -> {
+//                newPass.ecl = wordSp[1];
+//                if(wordSp[1].matches("^(amb|blu|brn|gry|grn|hzl|oth)$")){
+//                    newPass.fieldsSet++;
+//                }
+//            }
+//            case "pid" -> {
+//                newPass.pid = wordSp[1];
+//                if(wordSp[1].matches("^\\d{9}$")){
+//                    newPass.fieldsSet++;
+//                }
+//            }
+//            case "cid" -> {
+//                newPass.cid = wordSp[1];
+//            }
+//        }
 
     }
 
